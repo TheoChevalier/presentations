@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="fr"><!-- <html lang="en-US" class="nonumbers"> --><!-- ^ if you want no numbers on the slides add a "nonumbers" class to the HTML element --><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Les logiciels de gestion de versions</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1274, user-scalable=no">
+  <link rel="stylesheet" href="../themes/mozilla/styles/style.css">
+  <link rel="stylesheet" href="../themes/mozilla/styles/print.css" media="print">
+</head>
+<body style="transform: scale(1.02031);" class="full">
+  <header class="caption">
+    <h1>Les logiciels de gestion de versions</h1>
+    <h2>Présentation de GIT</h2>
+  </header>
+
+<!-- 
+  
+  Simply copy the whole block for each slide you want.
+  Special slides get extra classes. Each slide needs an ID 
+  to allow for bookmarking and target jumping.
+  
+  Images, videos and SVG objects are automatically centred
+  when you add a class of "middle"
+
+  If you add a "cover" class images are taking over the whole 
+  screen resized to height. Add a "w" class to resize to width.
+
+ -->
+  <div id="cover" class="slide"><div>
+    <section>
+      <header>
+        <h1>Les logiciels de gestion de versions</h1>
+      </header>
+      <img src="slides/introicons.png" class="middle" alt="Icônes de Subversion, Mercurial et GIT">
+      <footer class="byline">Théo Chevalier</footer>
+    </section>
+  </div></div>
+  <div id="definition" class="slide"><div>
+    <section>
+      <header>
+        <h2>Définition</h2>
+      </header>
+      <blockquote>
+      <p>Un logiciel de gestion de versions permet de stocker un ensemble de fichiers en conservant la chronologie de toutes les modifications qui ont été effectuées dessus.</p>
+      </blockquote>
+
+      <footer class="notes">
+        
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="DistributedVsCentralized" class="slide"><div>
+    <section>
+      <header>
+        <h2>Centralisé Vs. Distribué</h2>
+      </header>
+      <img src="slides/Distributed_Vs_Centralized.jpg" class="middle" alt="Centralisé Vs. distribué"/>
+
+      <footer class="notes">
+        
+      </footer>  
+    </section>
+  </div></div>
+
+  <div id="comment" class="slide"><div>
+    <section>
+      <header>
+        <h2>Mais la tendance…</h2>
+      </header>
+      <img src="slides/principe.png" class="middle" alt="Distribué avec serveur">
+
+    <footer class="notes">
+      Tout le monde a une copie de l'historique
+      Le serveur facilite la transmission
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="intro" class="slide"><div>
+    <section>
+      <header>
+        <h2>Plusieurs logiciels</h2>
+      </header>
+      <ul>
+        <li>SVN (Subversion) - centralisé</li>
+        <li>HG (Mercurial) - distribué</li>
+        <li>GIT - distribué</li>
+      </ul>
+
+      <footer class="notes">
+        SVN : Apache, sites web Mozilla...
+        HG : Python, Thunderbird, Firefox ...
+        GIT : VLC, Android, Firefox OS, Debian, Linux
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="git" class="slide"><div>
+    <section>
+      <header>
+        <h2>GIT</h2>
+      </header>
+      <img src="slides/git.png" class="middle" alt="Git logo">
+
+      <footer class="notes">
+        Linus Torvalds en 2005 pour remplacer Bitkeeper
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="pour_quoi" class="slide"><div>
+    <section>
+      <header>
+        <h2>C'est cool, mais à quoi ça me sert ?</h2>
+      </header>
+      <ul>
+        <li>Un site web perso</li>
+        <li>Un logiciel</li>
+        <li>Des scripts</li>
+        <li>Un billet de blog</li>
+        <li>Un projet Gimp, Photoshop…</li>
+        <li>Ce que vous voulez !</li>
+      </ul>
+      <p class="demourl">Ça fonctionne aussi pour un plugin SPIP.</p>
+      <footer class="notes">
+        
+      </footer>
+    </section>
+  </div></div>
+      
+  <div id="avantages" class="slide"><div>
+    <section>
+      <header>
+        <h2>Les avantages</h2>
+      </header>
+      <ul>
+        <li>Pouvoir revenir en arrière</li>
+        <li>Travailler en équipe</li>
+        <li>Sauver des chatons</li>
+      </ul>
+      <footer class="notes">
+        modifications jamais perdues
+        travailler à plusieurs sur de gros projets
+        pouvoir apprendre en regardant du code
+        les LGV c'est le bien
+        A essayer sur un projet test
+      </footer>
+    </section>
+  </div></div>
+  
+  <div id="pourquoi" class="slide"><div>
+    <section>
+      <header>
+        <h2>Pourquoi GIT ?</h2>
+      </header>
+      <img src="slides/git_alone.png" class="right" alt="Git">
+      <ul>
+        <li>Serveurs Github gratuits</li>
+        <li>Utilisable également en local</li>
+        <li>Interfaces graphiques (tâches courantes)</li>
+        <li>Gère bien les conflits</li>
+        <li>Facile d'utiliser les branches</li>
+      </ul>
+
+      <footer class="notes">
+        Faire la différence GIT/Github - Payant pour les dépôts privés
+        Linux 3M de lignes de code
+        Client Windows/Mac
+        Gère mieux les conflits que hg
+      </footer>  
+    </section>
+  </div></div>
+
+  <div id="commit" class="slide"><div>
+    <section>
+      <header>
+        <h2>Qu'est-ce qu'un commit ?</h2>
+      </header>
+      <img src="slides/commit.png" class="middle" alt="Commit">
+
+      <footer class="notes">
+        Un diff, un patch, une révision...
+        différences avant/après
+        marche par lignes
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="configuration" class="slide"><div>
+    <section>
+      <header>
+        <h2>Configuration de GIT</h2>
+      </header>
+      <pre><code>$ git config --global user.name "Theo Chevalier"</code>
+      <code>$ git config --global user.email "contact@theochevalier.fr"</code>
+      </pre>
+      <p class="demourl"><a href="https://help.github.com" target="_blank">https://help.github.com</a></p>
+      <footer class="notes">
+        Nom/email publics pour la pulication des commits
+        Dépôt de trouve dans le répertoire courant, peut être déplacé manuellement
+      </footer>
+    </section>
+  </div></div>
+  
+  <div id="ssh" class="slide"><div>
+    <section>
+      <header>
+        <h2>Configuration de GIT - suite</h2>
+      </header>
+      <pre><code>$ ssh-keygen -t rsa -C "contact@theochevalier.fr"</code>
+      <p class="note">Ajoutez votre clé <mark>publique</mark> à votre compte Github</p>
+      <code>ssh -T git@github.com</code>
+      <code>Hi TheoChevalier! You've successfully authenticated</code>
+      </pre>
+      
+      <p class="demourl"><a href="https://help.github.com/articles/generating-ssh-keys" target="_blank">https://help.github.com/articles/generating-ssh-keys</a></p>
+      <footer class="notes">
+        Voir le lien pour le config SSH
+        le client Windows le fait automatiquement
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="clones" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Des clones… Des clones partout !</h2>
+      </header>
+      <img src="slides/clone.jpg" class="middle" alt="Clone">
+      <footer class="notes">
+        
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="clone" class="slide"><div>
+    <section>
+      <header>
+        <h2>Cloner un dépôt</h2>
+      </header>
+      <img src="slides/clone_git.png"  alt="Clone GIT">
+      <pre>
+        <code>$ git clone <mark>git://github.com/</mark>TheoChevalier/spip_annonces.git</code>
+      </pre>
+      <img src="slides/clone_ssh.png"  alt="Clone SSH">
+      <pre>
+        <code>$ git clone <mark>git@github.com:</mark>TheoChevalier/spip_annonces.git</code>
+      </pre>
+      <footer class="notes">
+        1. juste pour utiliser le projet (peut travailler dessus en local)
+        2. pour participer au projet, si vous avez les droits
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="PremierCommit" class="slide"><div>
+    <section>
+      <header>
+        <h2>Premier commit !</h2>
+      </header>
+      <pre>
+        <code>$ git status</code>//Fichiers modifiés
+        <code>$ git diff</code>//Modifications
+        <code>$ git add *</code>// .gitignore
+        <code>$ git commit -am "Commit message"</code>
+        <code>$ git push</code>
+      </pre>
+      <p class="demourl">Houu… C'était dur !</p>
+      <footer class="notes"> 
+        .gitignore
+        git status / git diff pour éviter d'envoyer n'importe quoi
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="explosion" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>BOUM.</h2>
+      </header>
+      <img src="slides/explosion.jpeg" class="middle" alt="BOOM!">
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="DontPanic" class="slide cover w"><div>
+    <section>
+      <header>
+      </header>
+      <img src="slides/dont_panic.jpg" class="middle" alt="Don't panic!">
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="retourEnArriere" class="slide"><div>
+    <section>
+      <header>
+        <h2>Ok, comment j'annule ?</h2>
+      </header>
+      <ol>Trois cas :
+        <li>Avant le commit</li>
+        <li>Après le commit, mais avant le push</li>
+        <li>Après le commit et le push</li>
+      </ol>
+      <p class="demourl">Nan, CTRL+Z, vous oubliez.</p>
+      <footer class="notes"> 
+        
+      </footer>
+    </section>
+  </div></div>
+  
+  <div id="pasCommit" class="slide"><div>
+    <section>
+      <header>
+        <h2>1. Avant le commit</h2>
+      </header>
+      <ul class="nolist">
+        <pre>
+        <code>$ git checkout</code>
+        </pre>
+        <p class="note">ou</p>
+        <pre>
+        <code>$ git checkout chemin/vers/monfichier</code>
+      </pre>
+      <footer class="notes"> 
+      checkout remet à zéro l'état de tous les fichiers
+      </footer>
+    </section>
+  </div></div>
+  <div id="commitPasPush" class="slide"><div>
+    <section>
+      <header>
+        <h2>2. Après le commit, mais avant le push</h2>
+      </header>
+      <pre>
+        <code>$ git reset --hard HEAD^</code>
+      </pre>
+      <p class="note">ou</p>
+      <pre>
+        <code>$ git reset --hard d6d9892</code>
+      </pre>
+      <footer class="notes">
+      --hard /!\ Annule les commits et perd tous les changements
+      HEAD^ peut être appellé plusieurs fois
+      </footer>
+    </section>
+  </div></div>
+  
+  <div id="commitEtPush" class="slide"><div>
+    <section>
+      <header>
+        <h2>3. Après le commit et le push</h2>
+      </header>
+      <pre>
+        <code>$ git log</code>
+        <code>$ git revert d6d9892</code>
+      </pre>
+      <footer class="notes"> 
+        Créé un commit inverse
+        hg appelle ça un backout
+        // Repérer le numéro du commit à annuler
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="update" class="slide"><div>
+    <section>
+      <header>
+        <h2>Mettre à jour le dépôt local</h2>
+      </header>
+      <pre>
+        <code>$ git pull</code>
+      </pre>
+      <footer class="notes">
+        s'assurer d'avoir tout commité
+        Si conflit, il faut le corriger à la main
+        faire un commit/push
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="branches" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Les branches</h2>
+      </header>
+      <img title="" src="slides/branches.jpg" class="middle" alt="Les branches">
+      <footer class="notes"> 
+        
+      </footer>
+    </section>
+  </div></div>
+  
+    <div id="CestQuoiUneBranche" class="slide"><div>
+    <section>
+      <header>
+        <h2>branche == laboratoire</h2>
+      </header>
+      <img title="" src="slides/branches.png" class="middle" alt="Les branches">
+      <footer class="notes">
+        N'influence pas le reste du projet
+        Possible d'y travailler à plusieurs
+        pouvoir tester plusieurs choses à la fois
+      </footer>
+    </section>
+  </div></div>
+  
+  <div id="creerUneBranche" class="slide"><div>
+    <section>
+      <header>
+        <h2>Créer une branche</h2>
+      </header>
+        <pre>
+          <code>$ git branch super_idee</code>
+        </pre>
+      <footer class="notes">
+        
+        Ne s'y déplace pas
+      </footer>
+    </section>
+  </div></div>
+  
+  <div id="listerLesBranches" class="slide"><div>
+    <section>
+      <header>
+        <h2>Lister les branches</h2>
+      </header>
+        <pre>
+          <code>$ git branch</code>
+          <code>* master</code>
+          <code>  super_idee</code>
+        </pre>
+      <footer class="notes"> 
+        
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="changerDeBranche" class="slide"><div>
+    <section>
+      <header>
+        <h2>Changer de branche</h2>
+      </header>
+        <pre>
+          <code>$ git checkout super_idee</code>
+        </pre>
+      <footer class="notes"> 
+        git modifie les fichiers 
+        à partir de là, faire des commits
+        possible de créer une autre branche
+        
+      </footer>
+    </section>
+  </div></div>
+  
+    <div id="mergerBranche" class="slide"><div>
+    <section>
+      <header>
+        <h2>Fusionner deux branches</h2>
+      </header>
+        <pre>
+          <code>$ git merge super_idee</code>
+        </pre>
+        <p class="note">Exemple de conflit :</p>
+        <pre>
+          <code><<<<<<< HEAD:file.txt</code>
+          <code>Hello world</code>
+          <code>=======</code>
+          <code>Goodbye</code>
+          <code>>>>>>>> 77976da35a11db4580b80ae27e8d65caf5208086:file.txt</code>
+        </pre>
+      <footer class="notes">
+        sous-entendu vers master
+        si il y a des conflits, éditer, puis commiter
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="tags" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Les tags</h2>
+      </header>
+      <img title="" src="slides/tag.jpg" class="middle" alt="Graffiti Firefox">
+      <footer class="notes"> 
+        
+      </footer>
+    </section>
+  </div></div>
+  
+    <div id="definitionTags" class="slide"><div>
+    <section>
+      <header>
+        <h2>Les tags</h2>
+      </header>
+      <ul>
+        <li>Donner un nom à un commit, pour pouvoir y revenir facilement</li>
+      </ul>
+      <pre>
+        <code>$ git tag v1.1 77976da35a11db4580b80ae27e8d65caf5208086</code>
+      </pre>
+      <footer class="notes"> 
+        Tagger les versions d'un logiciel
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="github" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Et Github dans tout ça ?</h2>
+      </header>
+      <img title="" src="slides/github.jpg" class="middle" alt="La contribution, c'est la bière !">
+      <footer class="notes">
+        
+      </footer>
+    </section>
+  </div></div>
+  
+  <div id="collaborateurs" class="slide"><div>
+    <section>
+      <header>
+        <h2>Ajouter des collaborateurs</h2>
+      </header>
+      <img title="" src="slides/collaborateurs.png" class="middle" alt="Ajout de collaborateurs">
+      <footer class="notes">
+        Aller dans l'onglet admin du dépôt
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="pull-requests" class="slide"><div>
+    <section>
+      <header>
+        <h2>« Forks &amp; Pull-requests »</h2>
+      </header>
+      <ol>
+      <li>Créez une copie d'un projet sur votre compte Github (fork)</li>
+      <li>Modifiez-le (commit/push)</li>
+      <li>Proposez vos modifications au projet initial (pull-request)</li>
+      </ol>
+      <p class="demourl">Fork you.</p>
+      <footer class="notes">
+        différences avec les branches
+        Aller dans l'onglet admin du dépôt
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="issues" class="slide"><div>
+    <section>
+      <header>
+        <h2>Gestion des tickets</h2>
+      </header>
+      <img title="" src="slides/issues.png" class="middle" alt="Gestion des tickets">
+      <footer class="notes"> 
+        
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="thanks" class="slide"><div>
+    <section>
+      <header>
+        <h2>Merci.<br>Des questions ?</h2>
+      </header>
+      Slides : <a href="http://www.theochevalier.fr/slides/git/" target="_blank">www.theochevalier.fr/slides/git/</a>
+
+    <footer class="notes">
+      
+    </footer>
+
+    </section>
+  </div></div>
+
+  <!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+  <div class="progress"><div style="width: 100%;"></div></div>
+  <script src="../scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+
+</body></html>

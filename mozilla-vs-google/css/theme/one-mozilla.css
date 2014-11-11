@@ -87,6 +87,9 @@ body {
   letter-spacing: 0;
   text-shadow: none;
   font-weight: 300;
+  hyphens: none;
+  -moz-hyphens: none;
+word-wrap: none;
 }
 
 /*********************************************

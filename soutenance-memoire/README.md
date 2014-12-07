@@ -3,4 +3,4 @@ soutenance-memoire
 
 Présentation de ma soutenance de mémoire.
 
-http://theochevalier.github.io/soutenance-memoire
+http://theochevalier.github.io/presentations/soutenance-memoire

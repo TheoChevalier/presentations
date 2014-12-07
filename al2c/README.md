@@ -1,6 +1,6 @@
-mozilla-presentation
+Projet AL2C, réunion d’avancement 1
 ====================
 
-Slides of my Mozilla presentation at University
+Mini présentation à l'université pour le projet À la Croisée des Compétences
 
-http://theochevalier.github.io/mozilla-presentation/
+http://theochevalier.github.io/presentations/al2c/

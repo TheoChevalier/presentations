@@ -1,6 +1,6 @@
-mozilla-presentation
+Talk for my English class
 ====================
 
-Slides of my Mozilla presentation at University
+English talk comparing Google and Mozilla
 
-http://theochevalier.github.io/mozilla-presentation/
+http://theochevalier.github.io/presentations/mozilla-vs-google/

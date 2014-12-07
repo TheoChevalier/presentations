@@ -1,6 +1,6 @@
-soutenance-memoire
+L10n Driver Intern
 ==================
 
-Présentation de ma soutenance de mémoire.
+Internship presentation at Mozilla, Mountain View, CA. (August 24th, 2014)
 
-http://theochevalier.github.io/soutenance-memoire
+http://theochevalier.github.io/presentations/l10n-driver/

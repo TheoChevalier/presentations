@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Mozilla</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/one-mozilla.css" id="theme">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+
+			if(!remot){
+				var remot={io:{uid:'ePbgS'}};
+				(function(){
+					var sc=document.createElement('SCRIPT');
+					sc.type='text/javascript';
+					sc.src='http://remot.io/js/compact/bookmarklet.js';
+					document.getElementsByTagName('head')[0].appendChild(sc);
+				})();
+			}
+		</script>
+
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section >
+				<h2>AL2C 2015</h2>
+				<h3>Point du 18 décembre 2014</h3>
+				<br>
+					<img class="stretch" src="img/logo-miage.png">
+					<br>
+					<p>
+						Léa CHÉOUX, Théo CHEVALIER, Madalina MINDRU, Xiaoyan PU, Thibaut REVILLIOD <br><br> M1 MIAGE &ndash; Toulouse
+					</p>
+				</section>
+
+				<section>
+					<h2>Contrôle qualité de traductions</h2>
+					<br>
+					<img class="stretch" src="img/l10n.png">
+				</section>
+
+				<section>
+					<h2>Partenaire</h2>
+					<img src="img/mozilla.png">
+					<p>Département de coordination des traductions <i>(L10N Drivers)</i><br>
+					+ Professeur de l’université de St. Louis, MO</p>
+				</section>
+
+				<section>
+					<h2>Traduction</h2>
+					<br>
+					<ul>
+						<li>Traduction de produits multilingues (logiciels, sites web)</li>
+						<li>Typographie très soignée = exigence qualité</li>
+						<li>Maintenir une cohérence sur un volume important</li>
+						<li>Courts délais : limiter les risques</li>
+					</ul>
+				</section>
+
+				<section>
+					<img class="stretch" src="img/transvision2.png">
+				</section>
+
+				<section>
+					<h2>Détection de fautes typographiques</h2>
+					<br>
+					<ul>
+						<li>Prise en charge de multiples codes typographiques</li>
+						<li>Prise en charge de multiples langues</li>
+						<li><i>Crowdsourcing</i> des codes typographiques</li>
+						<li>Intégration aux outils de contrôle qualité</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h2>Valeur ajoutée aux possibilités existantes</h2>
+					<br>
+					<ul>
+						<li>Vérification typographie pour plusieurs langues</li>
+						<li>Création d’un système pour ajouter les règles</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Actions à venir</h2>
+					<br>
+					<ul>
+						<li>Validation du projet ce soir</li>
+						<li>Redistribution des rôles</li>
+						<li>Étudier les différentes possibilités pour le système d’ajout de règles</li>
+					</ul>
+				</section>
+
+				<section data-state="grey">
+					<h3>Merci de votre attention.</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

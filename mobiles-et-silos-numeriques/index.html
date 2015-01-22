@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Mozilla</title>
+
+		<meta name="description" content="Mini conférence sur les mobiles et les silos numériques à la médiathèque de Toulouse">
+		<meta name="author" content="Théo Chevalier">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/one-mozilla.css" id="theme">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+
+			if(!remot){
+				var remot={io:{uid:'ePbgS'}};
+				(function(){
+					var sc=document.createElement('SCRIPT');
+					sc.type='text/javascript';
+					sc.src='http://remot.io/js/compact/bookmarklet.js';
+					document.getElementsByTagName('head')[0].appendChild(sc);
+				})();
+			}
+		</script>
+
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<img class="stretch" src="img/locked2.png">
+					<br><br>
+					<h2>Mobiles et silos numériques</h2>
+					<p>
+						<i><a href="http://theochevalier.fr">Théo CHEVALIER</a> &ndash; Cryptoparty Toulouse</i>
+					</p>
+				</section>
+				<section>
+					<h2>about:me</h2>
+					<img class="stretch" src="img/fox_suit.jpg">
+					<ul>
+						<li>Étudiant en Master MIAGE à Toulouse</li>
+						<li>Contributeur Mozilla</li>
+					</ul>
+				</section>
+
+				<section>
+				<h1>Des silos ?</h1>
+				</section>
+
+				<section data-transition="linear">
+					<img class="stretch" src="img/silos.png">
+				</section>
+
+				<section data-state="blue">
+					<h2><i>Write once, run everywhere</i></h2>
+					<img class="stretch" src="img/html-css-js.png">
+				</section>
+
+				<section data-transition="linear" data-state="blue">
+					<h2>Vraiment partout.</h2>
+					<img class="stretch" src="img/tv.png">
+				</section>
+
+				<section>
+					<h2>Ce qui change pour l’utilisateur</h2>
+					<ul>
+						<li>Marketplace n’est plus une obligation</li>
+						<li>Essai d’une appli <b>avant</b> installation</li>
+						<li>Plus besoin de racheter les applis</li>
+						<li>Gestion des permissions au cas par cas</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Et pour les développeurs</h2>
+					<ul>
+						<li>Pas de langage/outils/techno à apprendre</li>
+						<li>Rien à payer</li>
+						<li>Besoin de la permission de personne</li>
+						<li>Coûts extrêmement réduits</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Merci !</h1>
+					<br>
+					<h2>Me contacter :</h2>
+					<ul>
+						<li>Twitter : <a href="https://twitter.com/t_chevalier">@t_chevalier</a></li>
+						<li><a href="mailto:theo@theochevalier.fr">theo@theochevalier.fr</a></li>
+						<li>irc://irc.mozilla.org/frenchmoz</li>
+					</ul>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+				margin: 0.1,
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
